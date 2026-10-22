@@ -1,0 +1,21 @@
+PHONE එකෙන් APK Build කරගැනීම (GitHub Actions)
+
+මෙම ක්‍රමයට GitHub account එකක් සහ Internet අවශ්‍යයි. Build එක GitHub cloud computer එකේ සිදුවේ; Phone එකෙන් පමණක් පියවර කළ හැක.
+
+1. GitHub.com වෙත Chrome එකෙන් ගොස් account එකකට Sign in වන්න.
+2. New repository එකක් සාදන්න. නම: post-office-directory-apk
+3. Repository එක Public හෝ Private ලෙස තෝරා Create repository කරන්න.
+4. Add file > Upload files මඟින් Sri_Lanka_Post_Office_Directory_Android_Studio_Project.zip ගොනුව upload කර Commit changes කරන්න.
+5. .github/workflows/build-apk.yml සඳහා repository එකේ Add file > Create new file තෝරන්න.
+6. File name ලෙස .github/workflows/build-apk.yml යොදන්න.
+7. මෙම kit එකේ build-apk.yml ගොනුවේ සියලුම පෙළ copy කර එම GitHub editor එකට paste කර Commit changes කරන්න.
+8. Repository එකේ Actions tab එකට යන්න. “Build Post Office Directory APK” workflow එක තෝරන්න.
+9. “Run workflow” බොත්තම තිබේ නම් එය ඔබා නැවත Run workflow කරන්න. Push එකෙන් ස්වයංක්‍රීයව ආරම්භ නොවූ විට මෙය භාවිත කරන්න.
+10. Build එක සාර්ථක වූ පසු workflow run එක විවෘත කර Artifacts කොටසේ Post-Office-Directory-debug-APK download කරන්න.
+11. Download කළ artifact ZIP එක Files app එකෙන් Extract කරන්න. එහි app-debug.apk ගොනුව ඇත.
+12. APK එක විවෘත කර Android ඉල්ලන විට එම app එක/Files හෝ Chrome සඳහා “Install unknown apps” අවසරය දෙන්න. ඔබට විශ්වාසදායක build එකක් බව තහවුරු කරගත් පසුව පමණක් install කරන්න.
+
+සටහන්:
+- මෙය debug APK එකකි; Play Store release සඳහා signed release build එකක් වෙනම අවශ්‍ය වේ.
+- APK එක මෙතැනින් compile කර නැත; මෙම workflow එක GitHub cloud build එකක් ආරම්භ කරයි.
+- PDF එකෙන් ලබාගත් postal directory දත්ත OCR මඟින් ලබාගෙන ඇති බැවින් වැදගත් postal code නිල මූලාශ්‍රය සමඟ තහවුරු කරන්න.
